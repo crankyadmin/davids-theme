@@ -1,4 +1,4 @@
-;;; davids-theme.el --- A Dark color theme for hackers
+ ;;; davids-theme.el --- A Dark color theme for hackers
 
 ;; Copyright (C) 2017 David William James Houston
 
@@ -25,7 +25,7 @@
 
 ;; To use it, put the following in your Emacs configuration file:
 ;;
-;;   (load-theme 'david t)
+;;   (load-theme 'davids t)
 ;;
 ;; Requirements: Emacs 24.
 
@@ -39,7 +39,7 @@
 
 ;;; Code:
 
-(deftheme david
+(deftheme davids
   "Dark color theme with a deep blue background")
 
 (let* ((class '((class color) (min-colors 89)))
@@ -61,7 +61,7 @@
        (purple "#ff708e"))
 
   (custom-theme-set-faces
-   'david
+   'davids
    `(default ((,class (:foreground ,foreground :background ,background))))
    `(bold ((,class (:weight bold))))
    `(bold-italic ((,class (:slant italic :weight bold))))
@@ -331,8 +331,8 @@
    `(org-column-title ((,class (:inherit org-column :weight bold :underline t))))
    `(org-date ((,class (:foreground ,blue :underline t))))
    `(org-document-info ((,class (:foreground ,aqua))))
-   `(org-document-info-keyword ((,class (:foreground ,green))))
-   `(org-document-title ((,class (:weight bold :foreground ,blue :height 1.44))))
+   `(org-document-info-keyword ((,class (:foreground ,yellow))))
+   `(org-document-title ((,class (:weight bold :foreground ,foreground :height 1.44))))
    `(org-done ((,class (:foreground ,green))))
    `(org-ellipsis ((,class (:foreground ,comment))))
    `(org-footnote ((,class (:foreground ,aqua))))
@@ -507,7 +507,7 @@
    `(gnus-summary-high-ancient ((,class (:foreground ,green :weight normal))))
    `(gnus-summary-high-ticked ((,class (:foreground ,orange :weight normal))))
    `(gnus-summary-cancelled ((,class (:foreground ,red :background nil :weight normal))))
-
+	 
    `(gnus-group-mail-low ((,class (:foreground ,comment))))
    `(gnus-group-mail-low-empty ((,class (:foreground ,comment))))
    `(gnus-group-mail-1 ((,class (:foreground nil :weight normal :inherit outline-1))))
@@ -583,13 +583,36 @@
    `(term-color-blue    ((,class (:foreground ,blue :background ,blue))))
    `(term-color-magenta ((,class (:foreground ,purple :background ,purple))))
    `(term-color-cyan    ((,class (:foreground ,aqua :background ,aqua))))
-   `(term-color-white   ((,class (:foreground ,background :background ,background)))))
+   `(term-color-white   ((,class (:foreground ,background :background ,background))))
+
+
+	 ;; Paradox 
+	 `(paradox-star-face  ((,class (:foreground ,yellow))))
+	 `(paradox-status-face-alist  ((,class (:foreground ,blue))))
+
+	 ;; Helm
+	 `(helm-selection ((,class (:foreground ,blue))))
+	 `(helm-buffer-process ((,class (:foreground ,foreground))))
+	 `(helm-buffer-size ((,class (:foreground ,foreground))))
+	 `(helm-header ((,class (:foreground ,foreground))))
+	 `(helm-helper ((,class (:foreground ,foreground))))
+	 `(helm-M-x-key ((,class (:foreground ,foreground :underline t :weight bold :slant italic))))
+
+	 `(helm-source-header ((,class (:foreground ,foreground
+																							:background ,background
+																							:font-family "Fira Code Retina"
+																							:weight bold
+																							:height 1.3))))
+	 ;; `(cider-result-overlay-face ((,class (:foreground ,foreground))))
+	 `(hl-line ((,class (:background "#3b444f"))))
+
+	 )
 
   ;; Change color of current line
-  (set-face-background 'hl-line "#3b444f")
+	;;  (set-face-background 'hl-line "#3b444f") 
   
   (custom-theme-set-variables
-   'david
+   'davids
    `(fci-rule-color ,current-line)
    `(vc-annotate-color-map
      '((20  . ,red)
@@ -624,7 +647,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'david)
+(provide-theme 'davids)
 
 ;; Local Variables:
 ;; rainbow-mode: t
