@@ -1,6 +1,6 @@
 ### David's Theme
 
-[![Main screenshot](/../screenshots/screenshot-1.jpg)](/../../tree/screenshots)
+[![Main screenshot](/https://github.com/crankyadmin/davids-theme/raw/screenshots/screenshots/screenshot-1.jpeg)](/../../tree/screenshots)
 
 - - -
 
