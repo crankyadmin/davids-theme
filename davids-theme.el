@@ -1,3 +1,4 @@
+;;; davids-theme.el --- A Darkish theme for Emacs
  ;;; davids-theme.el --- A Dark color theme for hackers
 
 ;; Copyright (C) 2017 David William James Houston
@@ -578,7 +579,7 @@
    `(term-color-white   ((,class (:foreground ,background :background ,background))))
 
 
-	 ;; Paradox 
+	 ;; Paradox
 	 `(paradox-star-face  ((,class (:foreground ,yellow))))
 	 `(paradox-status-face-alist  ((,class (:foreground ,blue))))
 
@@ -601,7 +602,7 @@
 	 )
 
   ;; Change color of current line
-	;;  (set-face-background 'hl-line "#3b444f") 
+	;;  (set-face-background 'hl-line "#3b444f")
   
   (custom-theme-set-variables
    'davids
@@ -646,3 +647,7 @@
 ;; hl-sexp-mode: nil
 ;; End:
 
+
+(provide 'davids-theme)
+
+;;; davids-theme.el ends here
