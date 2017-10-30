@@ -265,8 +265,8 @@
    `(magit-branch ((,class (:foreground ,green))))
    `(magit-diff-add ((,class (:inherit diff-added))))
    `(magit-diff-del ((,class (:inherit diff-removed))))
-   `(magit-header ((,class (:inherit nil :weight bold))))
-   `(magit-item-highlight ((,class (:inherit highlight :background nil))))
+   `(magit-section-heading ((t (:foreground ,yellow :weight bold))))
+   `(magit-item-highlight ((,class (:inherit highlight :background ,blue))))
    `(magit-log-author ((,class (:foreground ,aqua))))
    `(magit-log-graph ((,class (:foreground ,comment))))
    `(magit-log-head-label-bisect-bad ((,class (:foreground ,red))))
@@ -277,6 +277,8 @@
    `(magit-log-head-label-tags ((,class (:foreground ,aqua :box nil :weight bold))))
    `(magit-log-sha1 ((,class (:foreground ,yellow))))
    `(magit-section-title ((,class (:foreground ,blue :weight bold))))
+	 `(magit-section-highlight ((t nil)))
+	 `(magit-diff-context-highlight ((t (:foreground "grey70"))))
 
    ;; git-gutter
    `(git-gutter:modified ((,class (:foreground ,purple :weight bold))))
